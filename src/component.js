@@ -53,10 +53,16 @@ class Component extends React.Component {
 	 * @param {*} data
 	 */
 	emit (event, data) {
-		if (!this._events[event]) return;
-		this._events[event].forEach(function (handler) {
-			handler(data);
-		});
+		const propHandlerName = 'on' + event[0].toUpperCase() + event.substr(1);
+		if (this.props && this.props[propHandlerName]) {
+			this.props[propHandlerName].call(this, data);
+		}
+
+		if (this._events[event]) {
+			this._events[event].forEach(handler => {
+				handler.call(this, data);
+			});
+		}
 	}
 }
 
