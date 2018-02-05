@@ -1,5 +1,7 @@
 ## React Professional
 
+Overrides React Component by event driven version.
+
 ### Methods
 
 - on(event, handler) - bind event
