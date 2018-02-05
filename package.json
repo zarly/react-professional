@@ -7,16 +7,22 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine tests"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zarly/react-professional.git"
   },
-  "author": "",
+  "author": "Alexander Abramov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zarly/react-professional/issues"
   },
-  "homepage": "https://github.com/zarly/react-professional#readme"
+  "homepage": "https://github.com/zarly/react-professional#readme",
+  "devDependencies": {
+    "chai": "^4.1.2"
+  },
+  "dependencies": {
+    "react": "^16.2.0"
+  }
 }
